@@ -3,7 +3,6 @@
 Организуйте вывод обратного значения в виде шестнадцатеричного числа с плавающей точкой.
  */
 
-
 import java.util.Scanner;
 
 public class ConverterDigit {
@@ -11,10 +10,9 @@ public class ConverterDigit {
         Scanner in = new Scanner(System.in);
         System.out.print("Insert digit: ");
         int digit = in.nextInt();
-        double reverseDigit = 1.0/digit;
         System.out.println("Conversion to binary system: " + Integer.toString(digit, 2));
         System.out.println("Conversion to octal system: " + Integer.toString(digit, 8));
         System.out.println("Conversion to hexadecimal system: " + Integer.toString(digit, 16));
-        System.out.println("Conversion reverse digit to hexadecimal system: " + Double.toHexString(reverseDigit));
+        System.out.println("Conversion reverse digit to hexadecimal system: " + Double.toHexString(1.0/digit));
     }
 }
