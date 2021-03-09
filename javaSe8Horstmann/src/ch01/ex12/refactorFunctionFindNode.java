@@ -56,16 +56,17 @@ public class refactorFunctionFindNode {
         }
 */
 
-/*                        Refactoring this function
-* line[12]:
-*       outer: for (;;) {             ->                      for (;;) {
-*
-* line[16]:
-*       break outer;                   ->                    continue;
-*
-* line[29]:
-*       break outer;                   ->                    continue;
-*/
+/**
+ *                           Refactoring this function
+ * line[12]:
+ *       outer: for (;;) {             ->                      for (;;) {
+ *
+ * line[16]:
+ *       break outer;                   ->                    continue;
+ *
+ * line[29]:
+ *       break outer;                   ->                    continue;
+ */
 
 /*
         private Node<K,V> findNode(Object key) {
