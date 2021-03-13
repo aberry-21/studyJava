@@ -52,6 +52,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import static java.lang.System.exit;
+
 public class magicSquare {
 
     private static final ArrayList<Integer> arrayLengthLine = new ArrayList<>();
@@ -67,7 +69,7 @@ public class magicSquare {
             if ("".equals(newLine)) {
                 break;
             }
-            arrayInput.add(newLine);
+            arrayInput.add(newLine.trim());
         }
         return (arrayInput);
     }
@@ -75,7 +77,7 @@ public class magicSquare {
     private static void checkStringIsDigit(String lineArray){
         if (!lineArray.matches("-?\\d+(\\.\\d+)?")) {
             System.out.println("Error: Elements of the array must be digits.");
-            System.exit(1);
+            exit(1);
         }
     }
 
@@ -204,7 +206,7 @@ public class magicSquare {
                                                         arrayMagicSquare, i, j);
                 if (subArray != null && checkSubArrayMagicSquare(subArray)){
                     System.out.println("Magic Square has been found! ;)"
-                            + "\nIndex: " + (i + 1) + ";" + (j + 1)
+                            + "\nIndex: " + i + ";" + j
                             + "\nArray:");
                     printFindArray(subArray);
                     return (true);
@@ -216,6 +218,10 @@ public class magicSquare {
 
     public static void main(String[] args) {
         ArrayList<String> arrayInput = initializationArrayInput();
+        if (arrayInput.isEmpty()) {
+           System.out.println("Magic Square has not been found! :(");
+           exit(0);
+        }
         int[][] arrayMagicSquare = initializationArrayInt(arrayInput);
         findArrayMagicSquare(2, arrayMagicSquare);
     }
