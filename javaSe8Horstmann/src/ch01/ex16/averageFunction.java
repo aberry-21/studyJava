@@ -9,6 +9,21 @@
 /*   Updated: 2021/03/14 18:22:18 by aberry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/***
+ * Усовершенствуйте упоминавшийся ранее метод average () таким образом,
+ * чтобы он вызывался хотя бы с одним параметром.
+ *
+ * Original Function:
+ *
+ * public static double average(double... values) {
+ *      double sum = 0;
+ *      for (double v : values) sum += v;
+ *      return values.length == 0 ? 0 : sum / values.length;
+ * }
+ *
+ */
+
 package ch01.ex16;
 
 public class averageFunction {
