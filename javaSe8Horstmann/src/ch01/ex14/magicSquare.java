@@ -110,10 +110,6 @@ public class magicSquare {
 //************************Find Magic Square in array**************************\\
 //****************************************************************************\\
 
-    private static boolean checkArraySize(int originalSize, int resultSize){
-        return (originalSize == resultSize);
-    }
-
     private static boolean checkWidthArray(int[][] arrayMagicSquare){
         int originalSize = Arrays.stream(arrayMagicSquare[0]).sum();
         for (int[] line : arrayMagicSquare) {
@@ -121,7 +117,7 @@ public class magicSquare {
             for (int j = 0; j < arrayMagicSquare.length; j++) {
                 heightSize += line[j];
             }
-            if(!checkArraySize(originalSize, heightSize)){
+            if(originalSize != heightSize){
                 return (false);
             }
         }
@@ -135,7 +131,7 @@ public class magicSquare {
             for (int[] column : arrayMagicSquare) {
                 heightSize += column[j];
             }
-            if(!checkArraySize(originalSize, heightSize)){
+            if(originalSize != heightSize){
                 return (false);
             }
         }
@@ -151,8 +147,8 @@ public class magicSquare {
             collateralDiagonal += arrayMagicSquare[i][arrayMagicSquare.length
                                                                         - i - 1];
         }
-        return(checkArraySize(originalSize, mainDiagonal)
-                && checkArraySize(originalSize, collateralDiagonal));
+        return(originalSize == mainDiagonal
+                && originalSize == collateralDiagonal);
     }
 
     private static boolean checkSubArrayMagicSquare(int[][] arrayMagicSquare) {
