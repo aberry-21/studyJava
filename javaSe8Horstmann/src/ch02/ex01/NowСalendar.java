@@ -40,8 +40,6 @@ package ch02.ex01;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
-import java.util.Random;
-import java.util.Scanner;
 
 public class NowСalendar {
 
@@ -84,12 +82,6 @@ public class NowСalendar {
                 }
             }
         }
-        // create random object
-        Random randomno = new Random();
-
-        // check next int value
-        System.out.println("Next int value: " + randomno.);
-        System.out.println("Next int value: " + randomno.nextInt(10000));
     }
 }
 
