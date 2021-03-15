@@ -7,14 +7,10 @@
 "
 
 1) Собственно, из javadoc:
-   
-   public int nextInt (int radix)
-   
    Сканирует следующий токен ввода как int. Этот метод будет генерировать InputMismatchException, если следующий токен
    не может быть переведен в допустимое значение int. Если перевод выполнен успешно,сканер продвигается мимо ввода.
-   
    Соответственно, из определения следует, что NextInt() является модифицирующим методом.
-
+    """
     public int nextInt(int radix) {
         // Check cached result
         if ((typeCache != null) && (typeCache instanceof Integer)
@@ -36,8 +32,7 @@
             throw new InputMismatchException(nfe.getMessage());
         }
     }
-
-
+    """
 2) Из определения следует, что метод nextlnt () из класса Random является методом доступа
    """
        public int nextInt(int bound) {
