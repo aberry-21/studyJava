@@ -48,7 +48,7 @@ cmake-build-*/
 *.iws
 
 # IntelliJ
-out/
+javaSe8Horstmann/out/
 .idea
 *.iml
 

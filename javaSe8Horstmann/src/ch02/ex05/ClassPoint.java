@@ -34,7 +34,7 @@ package ch02.ex05;
  * @author Aaron Berry
  * @version 1.0
  */
-final class Point{
+class Point{
 
     /* *
      * Координата по оси x.

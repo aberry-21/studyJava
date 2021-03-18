@@ -27,8 +27,8 @@ package ch02.ex04;
 public class ExampleIntHolder {
 
     public static void swapIntegerValue(Integer firstElem, Integer secondElem) {
-        int tmpElem = Integer.valueOf(firstElem);
-        firstElem = Integer.valueOf(secondElem);
+        int tmpElem = firstElem;
+        firstElem = secondElem;
         secondElem = tmpElem;
     }
 
@@ -42,6 +42,6 @@ public class ExampleIntHolder {
 
 }
 /***
- * Как видим результат остался таким же, тк класс Integer содержит одно
- * единственное поле, но оно приватное.
+ * Как видим результат остался таким же, тк параметры функции являются
+ * копией ссылок на объекты.
  */

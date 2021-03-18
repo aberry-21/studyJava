@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 /**
- * Напишите программу, выводящую наименьшее и наибольшее положитель­ ные значения
- * типа double.Подсказка: воспользуйтесь методом Math.nextUp ()
+ * Напишите программу, выводящую наименьшее и наибольшее положительные значения
+ * типа double .Подсказка: воспользуйтесь методом Math.nextUp ()
  * из прикладного программного интерфейса Java API.
  */
 
@@ -23,18 +23,8 @@ import java.lang.Math;
 public class doubleMinMax {
 
     public static void main(String[] args) {
-        double digit = 0.0;
-        digit = Math.nextUp(digit);
-        if (digit == Double.MIN_VALUE) {
-            System.out.println("MIN_VALUE Double = " + digit);
-        }
-        digit = Double.MAX_VALUE - 0.00000000001;
-        while (Math.nextUp(digit) != Double.POSITIVE_INFINITY) {
-            digit = Math.nextUp(digit);
-        }
-        if (digit == Double.MAX_VALUE) {
-            System.out.println("MAX_VALUE Double = " + digit);
-        }
+        System.out.println("MIN_VALUE Double = " + Math.nextUp(0.0));
+        System.out.println("MAX_VALUE Double = " + Double.MAX_VALUE);
     }
 
 }

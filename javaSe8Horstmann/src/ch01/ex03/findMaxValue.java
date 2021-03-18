@@ -21,12 +21,10 @@ package ch01.ex03;
 import java.util.Scanner;
 
 public class findMaxValue {
-
     public static int findMaxValueFirstVersion(int[] numbers) {
-        if (numbers[0] > numbers[1]) {
-            return (numbers[0] > numbers[2] ? numbers[0] : numbers[2]);
-        }
-        return (numbers[1] > numbers[2] ? numbers[1] : numbers[2]);
+        return ((numbers[0] > numbers[1])
+                ? (numbers[0] > numbers[2] ? numbers[0] : numbers[2])
+                : (numbers[1] > numbers[2] ? numbers[1] : numbers[2]));
     }
 
     public static int findMaxValueSecondVersion(int[] numbers) {

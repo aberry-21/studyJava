@@ -24,9 +24,11 @@ public class noEmptySubstring {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("Original string : ");
-        String[] arrayString = in.nextLine().split("\\s+");
-        for (String str : arrayString){
-            System.out.println("Substring : " + str);
+        String line = in.nextLine();
+        for (int i = 0; i < line.length(); i++) {
+            for (int j = i + 1; j < line.length() + 1; j++) {
+                System.out.println("Substring : " + line.substring(i, j));
+            }
         }
     }
 

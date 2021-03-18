@@ -24,10 +24,8 @@ import java.lang.Math;
 public class normalizationAngle {
 
     public static void normalizationAngleFirstVersion(int digit) {
-        while (digit % 360 < 0){
-            digit += 360;
-        }
-        System.out.println("First version angle value: " + digit % 360);
+        digit = digit % 360;
+        System.out.println("First version angle value: " + ((digit < 0) ? digit + 360 : digit));
     }
 
     public static void normalizationAngleSecondVersion(int digit) {

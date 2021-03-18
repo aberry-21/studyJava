@@ -22,14 +22,19 @@ import java.math.BigInteger;
 public class factorialWithBiglnteger {
 
     public static BigInteger factorialInt(BigInteger finalDigit) {
-        return (finalDigit.compareTo(BigInteger.valueOf(1)) < 0)
-                ? BigInteger.valueOf(1)
+        return (finalDigit.compareTo(BigInteger.valueOf(2)) == 0)
+                ? finalDigit
                 : finalDigit.multiply(factorialInt(
                         finalDigit.subtract(BigInteger.valueOf(1))));
     }
 
     public static void main(String[] args) {
-        System.out.println(factorialInt(BigInteger.valueOf(1000)));
+        BigInteger n = BigInteger.valueOf(1000);
+        if (n.compareTo(BigInteger.valueOf(0)) <= 0){
+            System.out.println(BigInteger.valueOf(1));
+        }else{
+            System.out.println(factorialInt(n));
+        }
     }
 
 }

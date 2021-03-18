@@ -16,31 +16,30 @@
  * начните со списочного массива, заполняемого числами от 1 до 49.
  * Выберите произвольный индекс и удалите элемент массива.
  * Повторите эти действия шесть раз подряд.
- * Выведите полученный результат в отсортирован­ ном порядке.
+ * Выведите полученный результат в отсортирован­ном порядке.
  */
 
 package ch01.ex13;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Collections;
 
 public class lotteryCombination {
 
     public static void main(String[] args) {
-        ArrayList<Integer> lotteryArray = new ArrayList<>();
-        ArrayList<Integer> lotteryWinArray = new ArrayList<>();
+        List<Integer> lotteryArray = new ArrayList<>();
+        List<Integer> lotteryWinArray = new ArrayList<>();
         for (int i = 1; i < 50; i++) {
             lotteryArray.add(i);
         }
-        Collections.shuffle(lotteryArray);
+        java.util.Random random = new java.util.Random();
         for (int i = 0; i < 6; i++) {
-            lotteryWinArray.add(lotteryArray.get(i));
+            lotteryWinArray.add(lotteryArray.remove(random.nextInt(49 - i )));
         }
         Collections.sort(lotteryWinArray);
-        for (int i = 0; i < 6; i++) {
-            System.out.println((i + 1) + " winner is :"
-                    + lotteryWinArray.get(i));
-        }
+        System.out.println(lotteryWinArray.toString());
     }
 
 }
